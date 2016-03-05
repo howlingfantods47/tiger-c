@@ -6,6 +6,8 @@
 #ifndef SYMBOLH
 #define SYMBOLH
 
+#include "util.h"
+
 typedef struct S_symbol_ *S_symbol;
 
 /* Make a unique symbol from a given string.

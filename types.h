@@ -1,9 +1,15 @@
 /*
- * types.h - 
+ * types.h -
  *
  * All types and functions declared in this header file begin with "Ty_"
  * Linked list types end with "..list"
  */
+
+
+#ifndef  types_INC
+#define  types_INC
+
+#include "symbol.h"
 
 typedef struct Ty_ty_ *Ty_ty;
 typedef struct Ty_tyList_ *Ty_tyList;
@@ -37,3 +43,6 @@ Ty_fieldList Ty_FieldList(Ty_field head, Ty_fieldList tail);
 
 void Ty_print(Ty_ty t);
 void TyList_print(Ty_tyList list);
+
+
+#endif   /* ----- #ifndef types_INC  ----- */

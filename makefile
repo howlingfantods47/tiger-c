@@ -1,6 +1,9 @@
 a.out: parsetest.o prabsyn.o absyn.o symbol.o table.o y.tab.o lex.yy.o errormsg.o util.o
 	cc -g parsetest.o prabsyn.o absyn.o symbol.o table.o y.tab.o lex.yy.o errormsg.o util.o
 
+env.o: env.c env.h
+	cc -g -c env.c
+
 parsetest.o: parsetest.c parsetest.h
 	cc -g -c parsetest.c
 
@@ -38,4 +41,6 @@ util.o: util.c util.h
 	cc -g -c util.c
 
 clean:
-	rm -f a.out table.o symbol.o absyn.o util.o parsetest.o lex.yy.c lex.yy.o errormsg.o y.tab.c y.tab.h y.tab.o y.output
+	rm -f a.out table.o env.o symbol.o absyn.o \
+		util.o parsetest.o lex.yy.c lex.yy.o errormsg.o \
+	  	y.tab.c y.tab.h y.tab.o y.output
